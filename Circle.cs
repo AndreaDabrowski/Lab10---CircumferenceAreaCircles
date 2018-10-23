@@ -10,7 +10,7 @@ namespace Lab10
     {
         private double radius;
         public const double PI = System.Math.PI;//field
-        public double Radius//property, not used in constructor because ????
+        public double Radius//property, not included in default constructor because we dont know the values yet
         {
             get
             {
@@ -23,7 +23,7 @@ namespace Lab10
         }
         public Circle(double radius)
         {
-            this.radius = radius;//initializing the variable
+            this.radius = radius;//initializing the variable inside constructor
         }
         public double CalculateCircumference()
         {
@@ -34,7 +34,7 @@ namespace Lab10
         public string CalculateFormattedCircumference()
         {
 
-            return FormatNumber(CalculateCircumference());
+            return FormatNumber(CalculateCircumference());//formats output to hundreths decimal place
         }
         public double CalculateArea()
         {
@@ -44,7 +44,7 @@ namespace Lab10
         }
         public string CalculateFormattedArea()
         {
-            string formattedArea = FormatNumber(CalculateArea());
+            string formattedArea = FormatNumber(CalculateArea());//formats are to hundreths place
             return formattedArea;
 
         }

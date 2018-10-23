@@ -16,7 +16,7 @@ namespace Lab10
             while (true) 
             {
                 Console.WriteLine("LETS FIND THE CIRCUMFERENCE AND AREA OF A CIRCLE!");
-                double radius = ValidateRadius();
+                double radius = ValidateRadius();//prompts user and validates correct format
 
                 Circle myCircle = new Circle(radius);//sets radius to user input
 
@@ -30,7 +30,7 @@ namespace Lab10
                 response = Console.ReadLine().ToLower();
                 if (YesOrNo(response) == true)
                 {
-                    counter++;
+                    counter++;//increases total number of calculated circles with each "y" response
                 }
                 else
                 {
@@ -61,7 +61,7 @@ namespace Lab10
                 else
                 {
                     Console.Write("Invalid input, try (y/n): ");
-                    response = Console.ReadLine().ToLower();
+                    response = Console.ReadLine().ToLower();//changes variable and loops to top
 
                 }
             }
@@ -78,7 +78,7 @@ namespace Lab10
                     return num;
 
                 }
-                catch (FormatException)
+                catch (FormatException)//throws exception for format issues
                 {
                     Console.Write("Invalid Format - Input valid number: ");
                 }
